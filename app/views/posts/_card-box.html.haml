@@ -1,0 +1,28 @@
+.card-box{id: "like-btn-#{post.id}"}
+  - if post.likes.count < 115
+    #middle-class
+      = render "posts/card", post: post
+      = render "likes/likes", post: post
+  - elsif post.likes.count < 120
+    #large-class
+      = render "posts/card", post: post
+      = render "likes/likes", post: post
+  
+  - elsif post.likes.count < 125
+    #middle-class
+      = render "posts/card", post: post
+      = render "likes/likes", post: post
+
+  - elsif post.likes.count < 130
+    #large-class
+      = render "posts/card", post: post
+      = render "likes/likes", post: post
+
+  - elsif post.likes.count < 135
+    #middle-class
+      = render "posts/card", post: post
+      = render "likes/likes", post: post
+  - else
+    #large-class
+      = render "posts/card", post: post
+      = render "likes/likes", post: post

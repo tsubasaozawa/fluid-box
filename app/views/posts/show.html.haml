@@ -1,6 +1,6 @@
 %h1 投稿詳細ページ
 投稿内容：
-= render "likes/likes", post: @post
+= render "posts/card-box", post: @post
 %h2#title いいねしたユーザー
 -# - @post.liked_users.each do |user|
 -#   %li= user.name

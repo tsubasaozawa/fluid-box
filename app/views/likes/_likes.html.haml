@@ -1,28 +1,4 @@
-.like-btn{id: "like-btn-#{post.id}"}
-  - if post.likes.count < 90
-    #middle-class
-      = render "posts/card", post: post
-
-  - elsif post.likes.count < 95
-    #large-class
-      = render "posts/card", post: post
-  
-  - elsif post.likes.count < 100
-    #middle-class
-      = render "posts/card", post: post
-
-  - elsif post.likes.count < 105
-    #large-class
-      = render "posts/card", post: post
-
-  - elsif post.likes.count < 110
-    #middle-class
-      = render "posts/card", post: post
-
-  - else
-    #large-class
-      = render "posts/card", post: post
-
+.like-btn
   = link_to post_likes_path(post), method: :post, remote: true, class: "like-icon" do
     = fa_icon "heart-o"
     #{post.likes.count}人がいいね!しています。
